@@ -1,2 +1,9 @@
 # jupyter-vertica-dev
-Docker setup for Jupyter oriented towards data science and engineering on Vertica
+Docker setup for Jupyter oriented towards data science and engineering on Vertica.
+
+The overall goal is to provide a Docker image that enables Jupyter notebook plus a number of useful toolsets such as Python and R engines, popular data science libraries, and visualization add-ons.  Users could then install and run the Docker image for easy setup of a Jupyter notebook environment on top of Vertica.
+
+The Dockerfile is derived from https://github.com/jupyter/docker-stacks/tree/master/datascience-notebook
+
+Prerequisites: download latest Vertica client TAR.GZ into same directory.  Also edit odbc.ini to match your setup.
+I've provided some scripts to help build and run the Docker image.
