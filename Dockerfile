@@ -89,6 +89,11 @@ RUN julia -e 'Pkg.init()' && \
 # setup Vertica client
 RUN conda install --yes vertica-python
 RUN pip install pyodbc
+RUN pip install dash # The core dash backend
+RUN pip install dash-renderer # The dash front-end
+RUN pip install dash-html-components # HTML components
+RUN pip install dash-core-components # Supercharged components
+RUN pip install plotly --upgrade # Plotly graphing library used in examples
 USER root
 ADD vertica-client-*.tar.gz /
 ADD odbc.ini /etc/odbc.ini
