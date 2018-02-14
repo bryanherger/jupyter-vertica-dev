@@ -4,7 +4,6 @@
 # Prerequisites: download latest Vertica client TAR.GZ into same directory.  Also edit odbc.ini to match your setup.
 FROM jupyter/scipy-notebook
 
-#original LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
 LABEL maintainer="Bryan Herger <bherger@users.sf.net>"
 
 USER root
@@ -99,4 +98,3 @@ ADD vertica-client-*.tar.gz /
 ADD odbc.ini /etc/odbc.ini
 USER $NB_USER
 ADD *.ipynb /home/jovyan/
-
